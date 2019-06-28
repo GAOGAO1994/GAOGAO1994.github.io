@@ -6,18 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019 | GaoGao&#39;s Blog</title>
+  <title>ES6 解构 | GaoGao&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前端学习记录">
-<meta property="og:type" content="website">
-<meta property="og:title" content="GaoGao&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/archives/2019/index.html">
+  <meta name="description" content="[TOC] 第五章 解构：使数据访问更便捷对象解构1234567let node = &amp;#123;  type: &amp;apos;id&amp;apos;,  name: &amp;apos;foo&amp;apos;,&amp;#125;;let &amp;#123;type, name&amp;#125; = node; // type === &amp;apos;id&amp;apos;, name === &amp;apos;foo&amp;apos;let &amp;#123;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ES6 解构">
+<meta property="og:url" content="http://yoursite.com/2019/06/28/ES6-解构/index.html">
 <meta property="og:site_name" content="GaoGao&#39;s Blog">
-<meta property="og:description" content="前端学习记录">
+<meta property="og:description" content="[TOC] 第五章 解构：使数据访问更便捷对象解构1234567let node = &amp;#123;  type: &amp;apos;id&amp;apos;,  name: &amp;apos;foo&amp;apos;,&amp;#125;;let &amp;#123;type, name&amp;#125; = node; // type === &amp;apos;id&amp;apos;, name === &amp;apos;foo&amp;apos;let &amp;#123;">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-06-28T07:43:20.058Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="GaoGao&#39;s Blog">
-<meta name="twitter:description" content="前端学习记录">
+<meta name="twitter:title" content="ES6 解构">
+<meta name="twitter:description" content="[TOC] 第五章 解构：使数据访问更便捷对象解构1234567let node = &amp;#123;  type: &amp;apos;id&amp;apos;,  name: &amp;apos;foo&amp;apos;,&amp;#125;;let &amp;#123;type, name&amp;#125; = node; // type === &amp;apos;id&amp;apos;, name === &amp;apos;foo&amp;apos;let &amp;#123;">
   
     <link rel="alternative" href="/atom.xml" title="GaoGao&#39;s Blog" type="application/atom+xml">
   
@@ -157,295 +158,175 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-ES6-解构" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      ES6 解构
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/28/ES6-解构/" class="archive-article-date">
+
+        
+        <a href="/2019/06/28/ES6-解构/" class="archive-article-date">
   	<time datetime="2019-06-28T07:41:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-28</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/28/ES6-解构/">ES6 解构</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>[TOC]</p>
+<h2 id="第五章-解构：使数据访问更便捷"><a href="#第五章-解构：使数据访问更便捷" class="headerlink" title="第五章 解构：使数据访问更便捷"></a>第五章 解构：使数据访问更便捷</h2><h3 id="对象解构"><a href="#对象解构" class="headerlink" title="对象解构"></a>对象解构</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">let node = &#123;</span><br><span class="line">  type: &apos;id&apos;,</span><br><span class="line">  name: &apos;foo&apos;,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">let &#123;type, name&#125; = node; // type === &apos;id&apos;, name === &apos;foo&apos;</span><br><span class="line">let &#123;type: TYPE, name: NAME&#125; = node; // TYPE === &apos;id&apos;, NAME === &apos;node&apos;</span><br></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
-          
+<h4 id="默认值"><a href="#默认值" class="headerlink" title="默认值"></a>默认值</h4><p>可以在结构语句中添加默认值，使其覆盖<code>false like</code>的值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let &#123;type, name, value = &apos;123&apos;&#125; = node;</span><br></pre></td></tr></table></figure>
 
+<h4 id="嵌套对象解构"><a href="#嵌套对象解构" class="headerlink" title="嵌套对象解构"></a>嵌套对象解构</h4><p>将对象拆解以获取你想要的信息。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let &#123;loc: &#123;start&#125;&#125; = node; // 从node中提取node.loc.start，赋值给start</span><br></pre></td></tr></table></figure>
+
+<h3 id="数组解构"><a href="#数组解构" class="headerlink" title="数组解构"></a>数组解构</h3><p>使用数组字面量，且解构操作全部在数组内完成。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">let colors = [&apos;red&apos;, &apos;greed&apos;, &apos;blue&apos;];</span><br><span class="line"></span><br><span class="line">let [first, second] = colors; // first === &apos;red&apos;, second === &apos;green&apos;</span><br><span class="line">let [, , third] = colors; // third === &apos;blue&apos;</span><br><span class="line">let [, , , fourth = &apos;black&apos;] = colors // 使用默认值,fourth === &apos;black&apos;</span><br></pre></td></tr></table></figure>
+
+<p>数组的解构可以用来<strong>交换变量</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let a = 1, b = 2;</span><br><span class="line">[b, a] = [a, b];</span><br></pre></td></tr></table></figure>
+
+<h4 id="不定元素"><a href="#不定元素" class="headerlink" title="不定元素"></a>不定元素</h4><p>数组的解构可以使用扩展运算符<code>...</code>来分拆或组合数组。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let [first, ...rest] = colors; // rest = [&apos;green&apos;, &apos;blue&apos;]</span><br><span class="line">let mixed = [...colors, ...rest]; // mixed = [&apos;red&apos;, &apos;green&apos;, &apos;blue&apos;, &apos;green&apos;, &apos;blue&apos;]</span><br></pre></td></tr></table></figure>
+
+<h3 id="解构参数"><a href="#解构参数" class="headerlink" title="解构参数"></a>解构参数</h3><p>在函数的参数表中，可以直接将某个参数对象的属性通过解构的方式获得，从而在函数中作为变量使用。</p>
+<p>解构参数建议提供被解构对象的默认值<code>{}</code>，从而避免从undefined中去解构，产生报错。</p>
+<p>解构时，可以为每个解构的属性提供默认值。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/06/28/ES6-解构/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/28/ES6-对象的扩展/" class="archive-article-date">
-  	<time datetime="2019-06-28T07:41:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-28</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/06/28/ES6-对象的扩展/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ES6 对象的扩展</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/28/ES6-对象的扩展/">ES6 对象的扩展</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/28/ES6-函数的扩展/" class="archive-article-date">
-  	<time datetime="2019-06-28T07:41:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/28/ES6-函数的扩展/">ES6 函数的扩展</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/28/ES6-字符串和正则/" class="archive-article-date">
-  	<time datetime="2019-06-28T07:41:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/28/ES6-字符串和正则/">ES6 字符串和正则</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/28/ES6-作用域/" class="archive-article-date">
-  	<time datetime="2019-06-28T07:39:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/28/ES6-作用域/">ES6 作用域</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/28/04-回调/" class="archive-article-date">
-  	<time datetime="2019-06-28T07:38:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/28/04-回调/">04 回调</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/28/03-类型和语法/" class="archive-article-date">
-  	<time datetime="2019-06-28T07:37:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/28/03-类型和语法/">03 类型和语法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/28/02-this和对象原型/" class="archive-article-date">
-  	<time datetime="2019-06-28T07:35:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/28/02-this和对象原型/">02 this和对象原型</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/28/hexo搭建记录/" class="archive-article-date">
-  	<time datetime="2019-06-28T07:32:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/28/hexo搭建记录/">hexo搭建全纪录</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/28/js作用域/" class="archive-article-date">
-  	<time datetime="2019-06-28T07:32:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/28/js作用域/">01 js作用域</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2019/page/2/">2</a><a class="extend next" rel="next" href="/archives/2019/page/2/">Next &raquo;</a>
-    </nav>
   
 
 
@@ -469,8 +350,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

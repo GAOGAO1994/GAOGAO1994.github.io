@@ -6,18 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019 | GaoGao&#39;s Blog</title>
+  <title>ES6 对象的扩展 | GaoGao&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前端学习记录">
-<meta property="og:type" content="website">
-<meta property="og:title" content="GaoGao&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/archives/2019/index.html">
+  <meta name="description" content="[TOC] 第四章 扩展对象的功能性对象类别 普通（Ordinary）对象：具有JS对象所有默认内部行为。 特异（Exotic）对象：具有某些与默认行为不符的内部行为。 标准（Standard）对象：ES6规范中定义的对象，如Array、Date等。 内建（Built-in）对象：脚本开始执行时，存在于JS执行环境中的对象。  对象字面量语法扩展属性初始值的改写当一个对象的属性与本地变量同名时，不">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ES6 对象的扩展">
+<meta property="og:url" content="http://yoursite.com/2019/06/28/ES6-对象的扩展/index.html">
 <meta property="og:site_name" content="GaoGao&#39;s Blog">
-<meta property="og:description" content="前端学习记录">
+<meta property="og:description" content="[TOC] 第四章 扩展对象的功能性对象类别 普通（Ordinary）对象：具有JS对象所有默认内部行为。 特异（Exotic）对象：具有某些与默认行为不符的内部行为。 标准（Standard）对象：ES6规范中定义的对象，如Array、Date等。 内建（Built-in）对象：脚本开始执行时，存在于JS执行环境中的对象。  对象字面量语法扩展属性初始值的改写当一个对象的属性与本地变量同名时，不">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-06-28T07:43:04.492Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="GaoGao&#39;s Blog">
-<meta name="twitter:description" content="前端学习记录">
+<meta name="twitter:title" content="ES6 对象的扩展">
+<meta name="twitter:description" content="[TOC] 第四章 扩展对象的功能性对象类别 普通（Ordinary）对象：具有JS对象所有默认内部行为。 特异（Exotic）对象：具有某些与默认行为不符的内部行为。 标准（Standard）对象：ES6规范中定义的对象，如Array、Date等。 内建（Built-in）对象：脚本开始执行时，存在于JS执行环境中的对象。  对象字面量语法扩展属性初始值的改写当一个对象的属性与本地变量同名时，不">
   
     <link rel="alternative" href="/atom.xml" title="GaoGao&#39;s Blog" type="application/atom+xml">
   
@@ -157,295 +158,200 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-ES6-对象的扩展" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/28/ES6-解构/" class="archive-article-date">
-  	<time datetime="2019-06-28T07:41:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-28</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/28/ES6-解构/">ES6 解构</a>
+    <h1 class="article-title" itemprop="name">
+      ES6 对象的扩展
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/28/ES6-对象的扩展/" class="archive-article-date">
+        
+        <a href="/2019/06/28/ES6-对象的扩展/" class="archive-article-date">
   	<time datetime="2019-06-28T07:41:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-28</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/28/ES6-对象的扩展/">ES6 对象的扩展</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>[TOC]</p>
+<h2 id="第四章-扩展对象的功能性"><a href="#第四章-扩展对象的功能性" class="headerlink" title="第四章 扩展对象的功能性"></a>第四章 扩展对象的功能性</h2><h3 id="对象类别"><a href="#对象类别" class="headerlink" title="对象类别"></a>对象类别</h3><ul>
+<li><strong>普通（Ordinary）对象</strong>：具有JS对象所有默认内部行为。</li>
+<li><strong>特异（Exotic）对象</strong>：具有某些与默认行为不符的内部行为。</li>
+<li><strong>标准（Standard）对象</strong>：ES6规范中定义的对象，如Array、Date等。</li>
+<li><strong>内建（Built-in）对象</strong>：脚本开始执行时，存在于JS执行环境中的对象。</li>
+</ul>
+<h3 id="对象字面量语法扩展"><a href="#对象字面量语法扩展" class="headerlink" title="对象字面量语法扩展"></a>对象字面量语法扩展</h3><h4 id="属性初始值的改写"><a href="#属性初始值的改写" class="headerlink" title="属性初始值的改写"></a>属性初始值的改写</h4><p>当一个对象的属性与本地变量同名时，不必再写冒号和值，只需要写属性名。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function createPerson (name, age) &#123;</span><br><span class="line">  return &#123;name, age&#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
-          
+<h4 id="对象方法的简写"><a href="#对象方法的简写" class="headerlink" title="对象方法的简写"></a>对象方法的简写</h4><p>对象中声明方法，不需要冒号和function关键字。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var person = &#123;</span><br><span class="line">  sayName () &#123;</span><br><span class="line">    console.log(&apos;name&apos;);</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
+<h4 id="可计算属性名"><a href="#可计算属性名" class="headerlink" title="可计算属性名"></a>可计算属性名</h4><p>对象属性可以用变量表示。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var prefix = &apos;my&apos;;</span><br><span class="line">var person = &#123;</span><br><span class="line">  [prefix + &apos;number&apos;]: &apos;123&apos;,		// 等同于 mynumber:&apos;123&apos;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="新增方法"><a href="#新增方法" class="headerlink" title="新增方法"></a>新增方法</h3><h4 id="Object-is-方法"><a href="#Object-is-方法" class="headerlink" title="Object.is()方法"></a>Object.is()方法</h4><p>修正全等运算符中的两处疑惑点：</p>
+<ul>
+<li><code>+0 === -0</code></li>
+<li><code>NaN !== NaN</code></li>
+</ul>
+<h4 id="Object-assign-方法"><a href="#Object-assign-方法" class="headerlink" title="Object.assign()方法"></a>Object.assign()方法</h4><p>实现了类似于<code>mixin</code>的方法。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function mixin (source, supplier) &#123;</span><br><span class="line">  Object.keys(supplier).forEach(function (key) &#123;</span><br><span class="line">    source[key] = supplier[key];</span><br><span class="line">  &#125;);</span><br><span class="line">  return source;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Object.assign()的好处在于，可以复制访问器属性（get和set）。</p>
+<h3 id="重复的对象字面量属性"><a href="#重复的对象字面量属性" class="headerlink" title="重复的对象字面量属性"></a>重复的对象字面量属性</h3><p>代码不检查重复属性，对于每一组重复属性，都会选取最后一个取值。</p>
+<h3 id="自有属性枚举顺序"><a href="#自有属性枚举顺序" class="headerlink" title="自有属性枚举顺序"></a>自有属性枚举顺序</h3><p>基本规则是：</p>
+<ol>
+<li>所有数字键按升序排序</li>
+<li>所有字符串键按照它们被加入的对象的顺序排序</li>
+<li>所有Symbol键按照它们被加入对象的顺序排序</li>
+</ol>
+<h3 id="增强对象原型"><a href="#增强对象原型" class="headerlink" title="增强对象原型"></a>增强对象原型</h3><h4 id="改变对象原型"><a href="#改变对象原型" class="headerlink" title="改变对象原型"></a>改变对象原型</h4><p>添加与<code>Object.getPrototypeOf()</code>相对的<code>Object.setPrototypeOf()</code>方法，用于设置目标对象的<code>__proto__</code>（或理解为<code>[[Prototype]]</code>）。</p>
+<h4 id="简化原型访问的super引用"><a href="#简化原型访问的super引用" class="headerlink" title="简化原型访问的super引用"></a>简化原型访问的super引用</h4><p>super引用相当于指向对象原型的指针，实际上也就是<code>Object.getPrototypeOf(this)</code>的返回值。</p>
+<p><code>super.fn()</code>等效于<code>Object.getPrototypeOf(this).fn.call(this)</code>。</p>
+<p><code>super</code>是静态的，总是指向正确的对象，所以不需要担心运行时的特性。</p>
+<h3 id="正式的方法定义"><a href="#正式的方法定义" class="headerlink" title="正式的方法定义"></a>正式的方法定义</h3><p>super的所有引用都通过<code>[[HomeObject]]</code>属性来确定后续的运行过程。第一步是在<code>[[HomeObject]]</code>属性上调用<code>Object.getPrototypeOf()</code>方法来检索原型的引用；然后搜寻原型链，找到同名函数；最后，设置this绑定并且调用相应的方法。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/06/28/ES6-对象的扩展/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/28/ES6-函数的扩展/" class="archive-article-date">
-  	<time datetime="2019-06-28T07:41:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-28</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2019/06/28/ES6-解构/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          ES6 解构
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/06/28/ES6-函数的扩展/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ES6 函数的扩展</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/28/ES6-函数的扩展/">ES6 函数的扩展</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/28/ES6-字符串和正则/" class="archive-article-date">
-  	<time datetime="2019-06-28T07:41:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/28/ES6-字符串和正则/">ES6 字符串和正则</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/28/ES6-作用域/" class="archive-article-date">
-  	<time datetime="2019-06-28T07:39:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/28/ES6-作用域/">ES6 作用域</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/28/04-回调/" class="archive-article-date">
-  	<time datetime="2019-06-28T07:38:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/28/04-回调/">04 回调</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/28/03-类型和语法/" class="archive-article-date">
-  	<time datetime="2019-06-28T07:37:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/28/03-类型和语法/">03 类型和语法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/28/02-this和对象原型/" class="archive-article-date">
-  	<time datetime="2019-06-28T07:35:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/28/02-this和对象原型/">02 this和对象原型</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/28/hexo搭建记录/" class="archive-article-date">
-  	<time datetime="2019-06-28T07:32:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/28/hexo搭建记录/">hexo搭建全纪录</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/28/js作用域/" class="archive-article-date">
-  	<time datetime="2019-06-28T07:32:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/28/js作用域/">01 js作用域</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2019/page/2/">2</a><a class="extend next" rel="next" href="/archives/2019/page/2/">Next &raquo;</a>
-    </nav>
   
 
 
@@ -469,8 +375,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

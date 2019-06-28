@@ -6,18 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019 | GaoGao&#39;s Blog</title>
+  <title>ES6 作用域 | GaoGao&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前端学习记录">
-<meta property="og:type" content="website">
-<meta property="og:title" content="GaoGao&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/archives/2019/index.html">
+  <meta name="description" content="[TOC] 第一章 块级作用域绑定var声明及变量提升(Hoisting)机制通过关键字var声明的变量，都会被当成在当前作用域顶部声明的变量。 块级声明块级作用域存在于：  函数内部 块中（用大括号{}分隔）  用let来声明变量，就可以把变量的作用域限制在当前代码块中。let声明不会被提升，所以通常将let声明语句放在封闭代码块的顶部。 禁止重声明同一作用域中不能用let重复定义已经存在的标识">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ES6 作用域">
+<meta property="og:url" content="http://yoursite.com/2019/06/28/ES6-作用域/index.html">
 <meta property="og:site_name" content="GaoGao&#39;s Blog">
-<meta property="og:description" content="前端学习记录">
+<meta property="og:description" content="[TOC] 第一章 块级作用域绑定var声明及变量提升(Hoisting)机制通过关键字var声明的变量，都会被当成在当前作用域顶部声明的变量。 块级声明块级作用域存在于：  函数内部 块中（用大括号{}分隔）  用let来声明变量，就可以把变量的作用域限制在当前代码块中。let声明不会被提升，所以通常将let声明语句放在封闭代码块的顶部。 禁止重声明同一作用域中不能用let重复定义已经存在的标识">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-06-28T07:42:09.815Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="GaoGao&#39;s Blog">
-<meta name="twitter:description" content="前端学习记录">
+<meta name="twitter:title" content="ES6 作用域">
+<meta name="twitter:description" content="[TOC] 第一章 块级作用域绑定var声明及变量提升(Hoisting)机制通过关键字var声明的变量，都会被当成在当前作用域顶部声明的变量。 块级声明块级作用域存在于：  函数内部 块中（用大括号{}分隔）  用let来声明变量，就可以把变量的作用域限制在当前代码块中。let声明不会被提升，所以通常将let声明语句放在封闭代码块的顶部。 禁止重声明同一作用域中不能用let重复定义已经存在的标识">
   
     <link rel="alternative" href="/atom.xml" title="GaoGao&#39;s Blog" type="application/atom+xml">
   
@@ -157,295 +158,181 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-ES6-作用域" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/28/ES6-解构/" class="archive-article-date">
-  	<time datetime="2019-06-28T07:41:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-28</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/28/ES6-解构/">ES6 解构</a>
+    <h1 class="article-title" itemprop="name">
+      ES6 作用域
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/28/ES6-对象的扩展/" class="archive-article-date">
-  	<time datetime="2019-06-28T07:41:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/28/ES6-对象的扩展/">ES6 对象的扩展</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/28/ES6-函数的扩展/" class="archive-article-date">
-  	<time datetime="2019-06-28T07:41:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/28/ES6-函数的扩展/">ES6 函数的扩展</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/28/ES6-字符串和正则/" class="archive-article-date">
-  	<time datetime="2019-06-28T07:41:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/28/ES6-字符串和正则/">ES6 字符串和正则</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/28/ES6-作用域/" class="archive-article-date">
+        
+        <a href="/2019/06/28/ES6-作用域/" class="archive-article-date">
   	<time datetime="2019-06-28T07:39:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-28</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/28/ES6-作用域/">ES6 作用域</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>[TOC]</p>
+<h2 id="第一章-块级作用域绑定"><a href="#第一章-块级作用域绑定" class="headerlink" title="第一章 块级作用域绑定"></a>第一章 块级作用域绑定</h2><h3 id="var声明及变量提升-Hoisting-机制"><a href="#var声明及变量提升-Hoisting-机制" class="headerlink" title="var声明及变量提升(Hoisting)机制"></a>var声明及变量提升(Hoisting)机制</h3><p>通过关键字var声明的变量，都会被当成在当前作用域顶部声明的变量。</p>
+<h4 id="块级声明"><a href="#块级声明" class="headerlink" title="块级声明"></a>块级声明</h4><p>块级作用域存在于：</p>
+<ul>
+<li>函数内部</li>
+<li>块中（用大括号{}分隔）</li>
+</ul>
+<p>用let来声明变量，就可以把变量的作用域限制在当前代码块中。let声明不会被提升，所以通常将let声明语句放在封闭代码块的顶部。</p>
+<h4 id="禁止重声明"><a href="#禁止重声明" class="headerlink" title="禁止重声明"></a>禁止重声明</h4><p>同一作用域中不能用let重复定义已经存在的标识符，但是可以在内嵌作用域中let声明上一层作用域的同名变量。</p>
+<h4 id="const声明"><a href="#const声明" class="headerlink" title="const声明"></a>const声明</h4><p>const声明的是常量，其值一旦被设定后不可更改（其实是不可修改指针的指向。如果指向对象，则对象的值是可以修改的），因此<strong>const声明的同时必须进行初始化</strong>。</p>
+<h4 id="临时死区-Temporal-Dead-Zone"><a href="#临时死区-Temporal-Dead-Zone" class="headerlink" title="临时死区(Temporal Dead Zone)"></a>临时死区(Temporal Dead Zone)</h4><p>let和const声明的变量不会提升到作用域顶部，如果在声明之前访问这些变量，会触发ReferenceError（即使是相对安全的typeof操作符）。</p>
+<p>JavaScript引擎在扫描代码发现变量声明时，要么将它们提升至作用域顶部（var），要么将声明放到TDZ中（let和const）。对于TDZ中的变量，只有执行过变量声明语句后，变量才会从TDZ中移出，可以正常访问。</p>
+<h3 id="循环块中的块作用域绑定"><a href="#循环块中的块作用域绑定" class="headerlink" title="循环块中的块作用域绑定"></a>循环块中的块作用域绑定</h3><p>对于循环<code>for(let i=0; i &lt; num; i++)</code>中声明的变量<code>i</code>，只会在循环中才能访问到，同时每一次循环都是产生一个唯一的变量副本，并不会复用（避免了异步回调时候的取值问题）。</p>
+<p>它的作用类似于使用IIFE对其进行再一层的包装，从而获得一个局部作用域内的变量副本，不与外部共享，保证了取值的正确。</p>
+<p>const也可以用于循环，只是在循环中不能修改它的指向。</p>
+<h3 id="全局块作用域绑定"><a href="#全局块作用域绑定" class="headerlink" title="全局块作用域绑定"></a>全局块作用域绑定</h3><p>var用于全局作用域时，会创建一个全新的全局变量作为全局对象（window或global）的属性，也就是说var可能会覆盖已经存在的全局属性。</p>
+<p><strong>let和const用于全局作用域，会创建一个新的绑定，但该绑定不会添加为全局对象的属性。</strong>它会遮蔽全局的同名属性，但是依然可以使用window.attributeName的形式去获取到原本的属性。</p>
+<h3 id="块级绑定最佳实践的进化"><a href="#块级绑定最佳实践的进化" class="headerlink" title="块级绑定最佳实践的进化"></a>块级绑定最佳实践的进化</h3><p>默认使用const，只在确实需要改变变量的值时使用let。</p>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/06/28/ES6-作用域/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/28/04-回调/" class="archive-article-date">
-  	<time datetime="2019-06-28T07:38:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-28</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2019/06/28/ES6-字符串和正则/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          ES6 字符串和正则
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/06/28/04-回调/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">04 回调</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/28/04-回调/">04 回调</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/28/03-类型和语法/" class="archive-article-date">
-  	<time datetime="2019-06-28T07:37:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/28/03-类型和语法/">03 类型和语法</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/28/02-this和对象原型/" class="archive-article-date">
-  	<time datetime="2019-06-28T07:35:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/28/02-this和对象原型/">02 this和对象原型</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/28/hexo搭建记录/" class="archive-article-date">
-  	<time datetime="2019-06-28T07:32:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/28/hexo搭建记录/">hexo搭建全纪录</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/28/js作用域/" class="archive-article-date">
-  	<time datetime="2019-06-28T07:32:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/28/js作用域/">01 js作用域</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2019/page/2/">2</a><a class="extend next" rel="next" href="/archives/2019/page/2/">Next &raquo;</a>
-    </nav>
   
 
 
@@ -469,8 +356,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
