@@ -62,29 +62,20 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-我的第一篇博客" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-hexo搭建记录" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/06/28/我的第一篇博客/" class="article-date">
-  <time datetime="2019-06-28T04:58:45.000Z" itemprop="datePublished">2019-06-28</time>
+    <a href="/2019/06/28/hexo搭建记录/" class="article-date">
+  <time datetime="2019-06-28T04:28:53.520Z" itemprop="datePublished">2019-06-28</time>
 </a>
     
   </div>
   <div class="article-inner">
     
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/06/28/我的第一篇博客/">我的第一篇博客</a>
-    </h1>
-  
-
-      </header>
-    
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="我的第一篇博客"><a href="#我的第一篇博客" class="headerlink" title="我的第一篇博客"></a>我的第一篇博客</h1><h2 id="1-搭建hexo准备工作"><a href="#1-搭建hexo准备工作" class="headerlink" title="1 搭建hexo准备工作"></a>1 搭建hexo准备工作</h2><ol>
+        <p><a href="https://blog.csdn.net/wistbean/article/details/82291124" target="_blank" rel="noopener">借鉴：</a></p>
+<h2 id="1-搭建hexo准备工作"><a href="#1-搭建hexo准备工作" class="headerlink" title="1 搭建hexo准备工作"></a>1 搭建hexo准备工作</h2><ol>
 <li><p>安装node</p>
 </li>
 <li><p>安装cnpm</p>
@@ -96,7 +87,7 @@
 </li>
 <li><p>在对应目录下新建一个目录：mkdir blog</p>
 </li>
-<li><p>hexo init，创建，成功后出现的提示 👇</p>
+<li><p>hexo init，创建，成功后出现的提示 :point_down:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INFO  Start blogging with Hexo!</span><br></pre></td></tr></table></figure>
 
 <p>对应目录：</p>
@@ -105,7 +96,7 @@
 <li><p>启动：先clean一下，再生成 g：<code>generate</code> 的意思</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>运行：hexo s ，成功后👇</p>
+<li><p>运行：hexo s ，成功后:point_down:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">INFO  Start processing</span><br><span class="line">INFO  Hexo is running at http://localhost:4000 . Press Ctrl+C to stop.</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>打开localhost：4000，进入自动生成的第一篇博文：hello world</p>
@@ -128,11 +119,28 @@
 <li><p>打开就能看到新建的博客啦~~</p>
 </li>
 </ol>
+<h2 id="3-部署：免费方式GitHub"><a href="#3-部署：免费方式GitHub" class="headerlink" title="3 部署：免费方式GitHub"></a>3 部署：免费方式GitHub</h2><ol>
+<li><p>首先在自己的GitHub上创建一个仓库，命名为：用户名.github.io</p>
+</li>
+<li><p>回到命令行，安装一个插件：cnpm install hexo-deployer-git –save</p>
+<p>iOS的 ls 对应 win 的 dir 查看文件用</p>
+</li>
+<li><p>配置blog下的 _config.yml 文件，win用户可以使用notepad++来修改:point_down:，注意，每个后面都有空格！！</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/GAOGAO1994/GAOGAO1994.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>部署到远端：hexo d，d 就是 deploy ， 部署上去的意思。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Branch &apos;master&apos; set up to track remote branch &apos;master&apos; from &apos;https://github.com/GAOGAO1994/GAOGAO1994.github.io.git&apos;.</span><br><span class="line">[32mINFO [39m Deploy done: [35mgit[39m</span><br></pre></td></tr></table></figure>
+
+<p>:point_up_2:部署成功</p>
+</li>
+<li><p>现在我们直接通过 ：<a href="https://username.github.io/" target="_blank" rel="noopener">https://username.github.io/</a> 就可以访问我们的博客~~</p>
+</li>
+</ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/06/28/我的第一篇博客/" data-id="cjxforpl20001d0wontep20g1" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/06/28/hexo搭建记录/" data-id="cjxfp7eyu0001lowox5oo4yut" class="article-share-link">Share</a>
       
       
     </footer>
@@ -181,7 +189,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/06/28/hello-world/" data-id="cjxforpkr0000d0wodktwny0z" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/06/28/hello-world/" data-id="cjxfp7eyj0000lowot7eey9ff" class="article-share-link">Share</a>
       
       
     </footer>
@@ -222,7 +230,7 @@
       <ul>
         
           <li>
-            <a href="/2019/06/28/我的第一篇博客/">我的第一篇博客</a>
+            <a href="/2019/06/28/hexo搭建记录/">(no title)</a>
           </li>
         
           <li>
